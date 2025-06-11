@@ -1,0 +1,18 @@
+{% extends 'base_admin.html' %}
+{% block content %}
+<h2>Edit Data Wisata Kuliner</h2>
+<form method="POST">
+    <input name="namatempat" value="{{ tempat.namatempat }}" required>
+    <input name="rating" value="{{ tempat.rating }}" required>
+    <input name="jenis" value="{{ tempat.jenis }}" required>
+    <input name="harga" value="{{ tempat.harga }}" required>
+    <input name="lokasi" value="{{ tempat.lokasi }}" required>
+    <input name="jam_operasi" value="{{ tempat.jam_operasi }}" required>
+    <input name="layanan1" value="{{ tempat.layanan1 }}" required>
+    <input name="layanan2" value="{{ tempat.layanan2 }}" required>
+     <input name="menu" value="{{ tempat.menu }}" required>
+    <input name="gambar" value="{{ tempat.gambar }}" required>
+
+    <button type="submit">Simpan Perubahan</button>
+</form>
+{% endblock %}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KulyStem - Sistem Rekomendasi Kuliner Purbalingga</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='gambar/logo.jpg') }}" alt="Logo">
+                <h1>KulyStem</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/rekomendasi_nama">Sistem Rekomendasi</a></li>
+                    <li><a href="/data_kuliner">Data Wisata Kuliner</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2025 KulyStem</p>
+        </div>
+    </footer>
+</body>
+</html>

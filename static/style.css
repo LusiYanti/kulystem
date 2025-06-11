@@ -1,0 +1,368 @@
+/* Reset dan pengaturan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #00695c;
+    color: white;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+.footer-container img {
+    width: 40px;
+    margin-top: 10px;
+}
+
+/* Home Section */
+.home-section {
+    margin-top: 40px;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.home-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.home-text {
+    max-width: 600px;
+}
+
+.home-text h2 {
+    font-size: 28px;
+    color: #00695c;
+    margin-bottom: 20px;
+}
+
+.home-text p {
+    margin-bottom: 15px;
+    color: #444;
+}
+.btn.ya {
+    background-color: red;
+    color: white;
+}
+
+.btn.batal {
+    background-color: gray;
+    color: white;
+    margin-left: 10px;
+}
+
+.btn {
+    padding: 0.6rem 1rem;
+    background-color: #00695c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #004d40;
+}
+
+.center-title {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.peringatan {
+    margin-top: 1rem;
+    color: red;
+    font-size: 0.9rem;
+}
+
+.contoh {
+    font-size: 0.85rem;
+    color: gray;
+}
+
+.rekomendasi-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.rekomendasi-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-height: 300px;
+}
+
+.rekomendasi-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.form-group input {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-content h4 {
+    margin: 0;
+    font-size: 1rem;
+    flex: 1;
+}
+
+.btn-detail {
+    background-color: #00695c;
+    color: #fff;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.btn-detail:hover {
+    background-color: #00695c;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.search-bar input[type="text"] {
+    padding: 0.5rem;
+    width: 250px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.center-title {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.center-subtitle {
+    text-align: center;
+    color: #555;
+}
+.admin-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Agar posisinya ke tengah vertikal */
+    background-color: #f9f9f9;
+}
+
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-login label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-login input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-login .btn {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #5a9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-login .btn:hover {
+    background-color: #4a8;
+}
+
+/* Grid untuk rekomendasi keyword/nama */
+.rekomendasi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Kartu tempat kuliner */
+.rekomendasi-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease;
+}
+
+.rekomendasi-card:hover {
+    transform: translateY(-5px);
+}
+
+.rekomendasi-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Konten di dalam kartu */
+.rekomendasi-card .card-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.rekomendasi-card .card-content h4 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    color: #00695c;
+}
+
+.rekomendasi-card .card-content p {
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+

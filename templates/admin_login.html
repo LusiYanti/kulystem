@@ -1,0 +1,22 @@
+{% extends 'base_admin.html' %}
+
+{% block content %}
+<section class="admin-login">
+    <div class="container login-container">
+        <h2 class="center-title">Login Admin</h2>
+        <form method="POST" class="form-login">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            {% if error %}
+            <p class="error">{{ error }}</p>
+            {% endif %}
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

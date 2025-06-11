@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hasil-section">
+    <div class="container">
+        <h2 class="center-title hijau">Tempat yang kamu cari: "{{ tempat_asli }}"</h2>
+        <h3 class="center-title">Rekomendasi Tempat Wisata Kuliner Serupa</h3>
+
+        <div class="card-container">
+            {% for item in rekomendasi %}
+            <div class="card">
+                <img src="{{ url_for('static', filename='gambar/' ~ item.gambar) }}" alt="{{ item.namatempat }}">
+                <div class="card-content">
+                    <h4>{{ item.namatempat }}</h4>
+                    <a href="{{ url_for('detail_kuliner', id=item.id) }}" class="btn-detail">Detail</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

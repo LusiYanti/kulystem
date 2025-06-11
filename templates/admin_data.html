@@ -1,0 +1,62 @@
+{% extends 'base_admin.html' %}
+
+{% block content %}
+<div class="admin-container">
+    <aside class="sidebar">
+            <h3>KulyStem Admin</h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/admin/data">Data Wisata Kuliner</a></li>
+                <li><a href="/admin/logout" class="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="admin-main">
+        <h2>Data Wisata Kuliner</h2>
+        <a href="/admin/tambah" class="btn tambah">+ Tambah Data</a>
+
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Rating</th>
+                    <th>Jenis</th>
+                    <th>Harga</th>
+                    <th>Lokasi</th>
+                    <th>Jam Operasi</th>
+                    <th>Layanan1</th>
+                    <th>Layanan2</th>
+                    <th>Menu</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tempat in data %}
+                <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ tempat.namatempat }}</td>
+                <td>{{ tempat.rating }}</td>
+                <td>{{ tempat.jenis }}</td>
+                <td>{{ tempat.harga }}</td>
+                <td>{{ tempat.lokasi }}</td>
+                <td>{{ tempat.jam_operasi }}</td>
+                <td>{{ tempat.layanan1 }}</td>
+                <td>{{ tempat.layanan2 }}</td>
+                <td>{{ tempat.menu }}</td>
+                <td>
+                <a href="/admin/edit/{{ tempat.id }}" class="btn edit">Edit</a>
+                <form action="{{ url_for('admin_hapus', id=tempat.id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Yakin ingin menghapus data ini?');">
+                <button type="submit" class="btn hapus">Hapus</button>
+                </form>
+
+                </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+</div>
+{% endblock %}

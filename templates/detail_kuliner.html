@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="detail-kuliner">
+    <div class="container detail-container">
+        <div class="detail-image">
+            <img src="{{ url_for('static', filename='gambar/' + tempat.gambar) }}" alt="{{ tempat.namatempat }}">
+        </div>
+        <div class="detail-info">
+            <h2>{{ tempat.namatempat }}</h2>
+            <ul>
+                <li><strong>Rating:</strong> {{ tempat.rating }}</li>
+                <li><strong>Jenis:</strong> {{ tempat.jenis }}</li>
+                <li><strong>Harga:</strong> {{ tempat.harga }}</li>
+                <li><strong>Lokasi:</strong> {{ tempat.lokasi }}</li>
+                <li><strong>Jam Operasi:</strong> {{ tempat.jam_operasi }}</li>
+                <li><strong>Menu:</strong> {{ tempat.menu }}</li>
+                <li><strong>Layanan:</strong> {{ tempat.layanan1 }}, {{ tempat.layanan2 }}</li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

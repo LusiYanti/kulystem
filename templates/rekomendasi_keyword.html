@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="rekomendasi-section">
+    <div class="container">
+        <h2 class="center-title">Sistem Rekomendasi Berdasarkan Keywords</h2>
+        <div class="rekomendasi-flex">
+            <div class="rekomendasi-image">
+                <img src="{{ url_for('static', filename='gambar/cbf.jpg') }}" alt="Ilustrasi Kuliner">
+            </div>
+            <div class="rekomendasi-form">
+                <form method="POST" class="form-box">
+                    <div class="form-group">
+                    <label for="keywords">Masukan Kata Kunci</label>
+                    <input type="text" id="keywords" name="keywords" required>
+                    </div>
+                    <div class="form-group">
+                    <label for="jumlah">Jumlah Rekomendasi (1-10)</label>
+                    <input type="number" id="jumlah" name="jumlah" min="1" max="10" required>
+                    </div>
+                    
+                    <small class="contoh">Contoh: "ayam geprek bebek bakar"</small>
+
+                    <button type="submit" class="btn">Cari Rekomendasi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

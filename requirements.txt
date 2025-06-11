@@ -1,0 +1,8 @@
+Flask
+pandas
+numpy
+openpyxl
+scikit-learn
+Sastrawi
+Werkzeug==2.3.0
+

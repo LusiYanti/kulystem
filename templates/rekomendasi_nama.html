@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="rekomendasi-section">
+    <div class="container">
+        <h2 class="center-title">Sistem Rekomendasi Wisata Kuliner di Purbalingga</h2>
+        <div class="rekomendasi-flex">
+            <div class="rekomendasi-image">
+                <img src="{{ url_for('static', filename='gambar/cbf.jpg') }}" alt="Ilustrasi Kuliner">
+            </div>
+            <div class="rekomendasi-form">
+                <form method="POST" class="form-box">
+                    <div class="form-group">
+                        <label for="nama">Input Nama Tempat Wisata Kuliner</label>
+                        <input type="text" id="nama" name="nama" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="jumlah">Jumlah Rekomendasi (1-10)</label>
+                        <input type="number" id="jumlah" name="jumlah" min="1" max="10" required>
+                    </div>
+
+                    <small class="contoh">Contoh: "ayam geprek juara purbalingga"</small>
+
+                    <button type="submit" class="btn">Cari Rekomendasi</button>
+                </form>
+
+                {% if error %}
+                <p class="peringatan">
+                    Nama tempat tidak tersedia atau penulisan salah.<br>
+                    Cek di halaman <a href="/data_kuliner">Data Wisata Kuliner</a> atau cari berdasarkan <a href="/rekomendasi_keyword">Keywords</a>.
+                </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

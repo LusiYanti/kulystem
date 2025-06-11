@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="home-section">
+    <div class="container home-content">
+        <div class="home-image">
+            <img src="{{ url_for('static', filename='gambar/cbf.jpg') }}" alt="Gambar Kuliner">
+        </div>
+        <div class="home-text">
+            <h2>Sistem Rekomendasi Wisata Kuliner</h2>
+            <p>
+                Selamat datang di KulyStem - sistem rekomendasi wisata kuliner di Kabupaten Purbalingga
+                yang membantu Anda menemukan tempat makan atau wisata kuliner berdasarkan metode <strong>Content-Based Filtering</strong>.
+            </p>
+            <p>
+                Metode ini bekerja dengan cara membandingkan kesamaan konten antar tempat kuliner, seperti jenis tempat, menu, layanan,
+                harga, dan lainnya menggunakan teknik <strong>TF-IDF</strong> dan <strong>Cosine Similarity</strong>.
+            </p>
+            <a href="/rekomendasi_nama" class="btn">Rekomendasi Wisata Kuliner</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

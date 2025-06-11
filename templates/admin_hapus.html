@@ -1,0 +1,13 @@
+{% extends 'base_admin.html' %}
+
+{% block content %}
+<div class="hapus-confirm-box">
+    <h2>Konfirmasi Penghapusan</h2>
+    <p>Apakah Anda yakin ingin menghapus <strong>{{ tempat.namatempat }}</strong> dari data kuliner?</p>
+
+    <form method="POST">
+        <button type="submit" name="konfirmasi" value="ya" class="btn ya">Ya, Hapus</button>
+        <button type="submit" name="konfirmasi" value="tidak" class="btn batal">Tidak, Batalkan</button>
+    </form>
+</div>
+{% endblock %}

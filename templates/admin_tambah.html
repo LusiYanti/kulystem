@@ -1,0 +1,18 @@
+{% extends 'base_admin.html' %}
+{% block content %}
+<h2>Tambah Data Wisata Kuliner</h2>
+<form method="POST">
+    <input name="namatempat" placeholder="Nama Tempat" required>
+    <input name="rating" placeholder="Rating" required>
+    <input name="jenis" placeholder="Jenis Tempat" required>
+    <input name="harga" placeholder="Harga" required>
+    <input name="lokasi" placeholder="Lokasi" required>
+    <input name="jam_operasi" placeholder="Jam Operasi" required>
+    <input name="layanan1" placeholder="Layanan 1" required>
+    <input name="layanan2" placeholder="Layanan 2" required>
+    <input name="menu" placeholder="Menu Unggulan" required>
+    <input name="gambar" placeholder="Nama File Gambar" required>
+
+    <button type="submit">Tambah</button>
+</form>
+{% endblock %}

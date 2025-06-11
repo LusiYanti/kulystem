@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="data-section">
+    <div class="container">
+        <h2 class="center-title">Data Wisata Kuliner di Kabupaten Purbalingga</h2>
+        <p class="center-subtitle abu">Cari data wisata kuliner</p>
+        <form method="GET" action="{{ url_for('data_kuliner') }}" class="search-bar">
+            <input type="text" name="q" placeholder="Cari nama tempat..." value="{{ request.args.get('q', '') }}">
+            <button type="submit" class="btn">Cari</button>
+        </form>
+
+        <div class="card-container">
+            {% for item in data %}
+            <div class="card">
+                <img src="{{ url_for('static', filename='gambar/' ~ item.gambar) }}" alt="{{ item.namatempat }}">
+                <div class="card-content">
+                    <h4>{{ item.namatempat }}</h4>
+                    <a href="{{ url_for('detail_kuliner', id=item.id) }}" class="btn">Detail</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
